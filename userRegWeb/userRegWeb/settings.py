@@ -131,3 +131,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
