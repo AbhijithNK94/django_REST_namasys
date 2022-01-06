@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Own
-    'regApp.apps.RegappConfig',
+    'regApp',
     # Crispy form tags
     'crispy_forms'
 ]

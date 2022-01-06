@@ -3,8 +3,25 @@
 
 
 {% block content %}
-    <div class="container">
+    <div>
+        <legend class="border-bottom mb-4" style="color: white;">User Info</legend>
         <h2>User Name: {{user.username}}</h2>
         <h2>Email: {{user.email}}</h2>
+        <h2> First Name: {{user.first_name}}</h2>
+        <h2> Last Name: {{user.last_name}}</h2>
+    </div>
+    <div>
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <br>
+            <br>
+            <legend class="border-bottom mb-4" style="color: white;">Profile Update</legend>
+            {{ u_form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
     </div>
 {% endblock %}
